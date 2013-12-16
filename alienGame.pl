@@ -1,17 +1,8 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% game.pl  
-%
-% Use this as the starting point for your game.  This starter code includes
-% the following:
-%  - Two example areas
-%  - An example of how you might connect those areas 
-%  - Handling of the actions 'go _______.', 'help.', and 'quit.'
-%  - Basic input processing which strips punctuation and puts the words into a list 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 :- use_module(library(readln)).
 
-% Use this dynamic fact to store the player's current location
+% dynamic fact to store the player's current location
 :- dynamic current_room/1.	
 :- dynamic location_in_room/1.
 :- dynamic object/8.
@@ -518,7 +509,7 @@ process_input([_]) :-
 
 
 
-%%%% Below is just some basic input handling, you probably don't have to mess with it %%%%
+%%%% Basic input handling %%%%
 
 % Get input from the user
 get_input :- read_sentence(Input), get_input(Input).
